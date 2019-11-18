@@ -1,0 +1,52 @@
+## Question 1
+
+/ ou /*
+
+## Question 2
+/descendant::title
+//title
+/movies/movie/title
+/movies//title
+
+
+### Question3
+#### de la merde parce qu'on a aussi les prénoms des réalisateurs
+//firstname
+/descendant::firstname
+#### fin de la merde
+/movies/movie/directors/director/name/firstname
+//director//firstname
+
+
+### Question 4
+/movies/movie[child::year < 1980]/title
+//movie/title[following-sibling::year < 1980]
+
+### Question 5
+//movie[count(child::alternate_titles/atitle > 0)]/title
+//movie[alternate_titles [ atitle ] ]/title
+//movie[alternate_titles/atitle]/title
+
+### Question 6
+//movie[alternate_titles/atitle[@country = "fr"]]
+//movie[ alternate_titles/atitle/@country = "fr"]/title
+
+### Question 7
+//movie[.//director/name[firstname="Quentin" and lastname="Tarantino"]]/title
+
+### Question 8
+//movie[contains(.//summary, "robot")]/title
+
+### Question 11. Problème : La chaine dans runtime est parfois vide
+//movie[child::runtime > sum(/movies/movie/runtime) div count(/movies/movie/runtime)]/title
+_____
+XPath fonctionnel
+//movie[runtime > (sum(//runtime/child::text()) div count(//runtime/child::text()))]/title
+
+## Question 12
+//movie[(./year mod 4 = 0 and not(./year mod 100 = 0)) or (./year mod 400 = 0)  ]
+
+## Question 13
+
+
+### 21 pas possible

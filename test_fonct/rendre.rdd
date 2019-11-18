@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcd" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<SdlFSMSymbol identifier="SYM1" type="sdlText" text="FPAR IN monnaie NATURAL;
+DCL argent NATURAL;" outline_color="-" background_color="-" center_coordinates="196 78" dimensions="188 50" attached_symbol_id=""/>
+<NonStateTransition top_left_coordinates="229 161">
+<SdlFSMSymbol identifier="SYM2" type="sdlPrcdStart" outline_color="-" background_color="-" center_coordinates="298 176" dimensions="60 30" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM45" type="sdlTask" text="argent := monnaie" outline_color="-" background_color="-" center_coordinates="298 223" dimensions="138 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM46" type="sdlState" text="nom" outline_color="-" background_color="-" center_coordinates="298 275" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NonStateTransition>
+<StateTransitionBlock>
+<SdlFSMSymbolReference identifier="SYM46"/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM47" type="sdlContSig" text="true" outline_color="-" background_color="-" center_coordinates="298 327" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM48" type="sdlDecision" text="argent" outline_color="-" background_color="-" center_coordinates="298 379" dimensions="62 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM49" type="sdlAnswer" text="0" outline_color="-" background_color="-" center_coordinates="298 431" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM57" type="sdlPrcdReturn" outline_color="-" background_color="-" center_coordinates="298 477" dimensions="28 28" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM50" type="sdlAnswer" text="1:4" outline_color="-" background_color="-" center_coordinates="441 431" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM58" type="sdlSendSig" text="piece(1)" outline_color="-" background_color="-" center_coordinates="441 483" dimensions="76 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM59" type="sdlTask" text="argent := argent - 1" outline_color="-" background_color="-" center_coordinates="441 535" dimensions="160 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM51" type="sdlAnswer" text="5:9" outline_color="-" background_color="-" center_coordinates="611 431" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM60" type="sdlSendSig" text="piece(5)" outline_color="-" background_color="-" center_coordinates="611 483" dimensions="76 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM61" type="sdlTask" text="argent := argent - 5" outline_color="-" background_color="-" center_coordinates="611 535" dimensions="160 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM52" type="sdlAnswer" text="10:19" outline_color="-" background_color="-" center_coordinates="784 431" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM62" type="sdlSendSig" text="piece(10)" outline_color="-" background_color="-" center_coordinates="784 483" dimensions="82 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM63" type="sdlTask" text="argent := argent - 10" outline_color="-" background_color="-" center_coordinates="784 535" dimensions="166 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM53" type="sdlAnswer" text="20:49" outline_color="-" background_color="-" center_coordinates="960 431" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM64" type="sdlSendSig" text="piece(20)" outline_color="-" background_color="-" center_coordinates="960 483" dimensions="82 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM65" type="sdlTask" text="argent := argent - 20" outline_color="-" background_color="-" center_coordinates="960 535" dimensions="166 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM54" type="sdlAnswer" text="50:99" outline_color="-" background_color="-" center_coordinates="1136 431" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM66" type="sdlSendSig" text="piece(50)" outline_color="-" background_color="-" center_coordinates="1136 483" dimensions="82 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM67" type="sdlTask" text="argent := argent - 50" outline_color="-" background_color="-" center_coordinates="1136 535" dimensions="166 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM55" type="sdlAnswer" text="100:199" outline_color="-" background_color="-" center_coordinates="1316 431" dimensions="68 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM68" type="sdlSendSig" text="piece(100)" outline_color="-" background_color="-" center_coordinates="1316 483" dimensions="90 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM69" type="sdlTask" text="argent := argent - 100" outline_color="-" background_color="-" center_coordinates="1316 535" dimensions="174 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM56" type="sdlAnswer" text="ELSE" outline_color="-" background_color="-" center_coordinates="1500 431" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM70" type="sdlSendSig" text="piece(200)" outline_color="-" background_color="-" center_coordinates="1500 483" dimensions="90 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM71" type="sdlTask" text="argent := argent - 200" outline_color="-" background_color="-" center_coordinates="1500 535" dimensions="174 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+<SdlFSMSymbol identifier="SYM72" type="sdlState" text="nom" outline_color="-" background_color="-" center_coordinates="298 599" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+</StateTransitionBlock>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+</SdlFSMDiagram>
