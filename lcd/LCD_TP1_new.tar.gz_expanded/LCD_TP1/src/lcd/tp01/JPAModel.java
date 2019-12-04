@@ -65,7 +65,6 @@ class Movie {
 	public Movie(String[] line) {
 		this(Long.parseLong(line[0]), line[1], Integer.parseInt(line[2]), Integer.parseInt(line[3]),
 				Integer.parseInt(line[4]));
-
 	}
 
 	public String getTitle() {
@@ -132,10 +131,7 @@ class Role {
 	Role() {
 	};
 
-	Role(String name, People actor) {
-		this.name = name;
-		this.actor = actor;
-	}
+
 }
 class QueryResult {
 	String title;
@@ -224,8 +220,7 @@ public class JPAModel implements IModel {
 			if (f == null) throw new Exception();
 			fr = new BufferedReader(new FileReader(f));
 			
-			while ((line = fr.readLine()) != null)
-			{
+			while ((line = fr.readLine()) != null){
 				em.persist(new People(line.split(";",3)));
 			}
 			fr.close();
