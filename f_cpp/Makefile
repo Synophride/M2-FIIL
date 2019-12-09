@@ -9,3 +9,5 @@ tp1:	tp1.cpp
 
 tp2:	tp2.cpp
 	$(CC) $(FLAGS) tp2.cpp -o tp2
+clean:
+	rm tp1 tp2 

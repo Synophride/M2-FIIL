@@ -1,7 +1,6 @@
 #include<iostream> 
 
 
-
 class T {
 public:
   T(){std::cout<<this<<": constructed from nothing"<<std::endl;}
