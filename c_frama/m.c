@@ -1,8 +1,8 @@
 
 
-/*@
-  @  
-  @ 
+/*@  
+  @requires x > 0;
+  @ensures \result == x * y;
   @*/
 int m(int x, int y) {
     int res = 0;
