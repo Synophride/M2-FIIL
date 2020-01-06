@@ -52,6 +52,7 @@ public class MovieListServlet extends HttpServlet {
 				request.getSession().setAttribute("db", db);
 
 			}
+			
 			// On s'assure que from et to ont des valeurs raisonnables.
 			to = Integer.min(to,db.getNumMovies());
 			from = Integer.max(from,  0);
@@ -61,7 +62,7 @@ public class MovieListServlet extends HttpServlet {
 			request.setAttribute("to", new Integer(to));
 			request.setAttribute("from", new Integer(from));
 			rd.forward(request, response);
-
+			
 		} catch (Exception e) {
 			throw new ServletException(e);
 		}

@@ -10,6 +10,17 @@
 <body>
 	<h1>Liste des films</h1>
 	<!-- A COMPLETER QUESTION 6, 8 et 9 -->
-
+	<c:choose> 
+		<c:when test="${empty movies}">
+			PAS DE FILMS TROUVES
+		</c:when>
+		<c:otherwise>
+			<ul>
+			<c:forEach var="m" items="${movies}">
+				<li> <c:out value="${m.first}"/> <b /> <c:out value="${m.second}" /> <b/> </li>
+			</c:forEach>
+			</ul>
+		</c:otherwise>
+	</c:choose>
 </body>
 </html>

@@ -55,7 +55,11 @@ public class MovieListServlet extends HttpServlet {
 				to = Math.min(mdb.getNumMovies(), Integer.getInteger(s_to, to));
 			
 			List<Pair<Integer, String>> movieList = mdb.getMovieList(from, to);
-			
+			RequestDispatcher rd = request.getRequestDispatcher("movie_list.jsp");
+			request.setAttribute("movies", movieList);
+			request.setAttribute("from", new Integer(from));
+			request.setAttribute("to", new Integer(to));
+			rd.forward(request, response);
 		} catch (Exception e) {
 			throw new ServletException(e);
 		}
