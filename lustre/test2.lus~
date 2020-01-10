@@ -1,0 +1,6 @@
+
+node patate(input: int)
+returns (out: int);
+let
+ out = input;
+tel

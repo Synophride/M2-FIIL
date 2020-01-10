@@ -1,0 +1,39 @@
+oc5:
+module: DMux
+
+signals: 4
+   0: input:in - single:1 bool:0
+   1: input:sel - single:2 bool:0
+   2: output:a - single:3
+   3: output:b - single:4
+end: 
+
+variables: 5
+   0: $0
+   1: $0
+   2: $0
+   3: $0
+   4: $0
+end: 
+
+actions: 10
+   0: present: 0
+   1: present: 1
+   2: output: 2
+   3: output: 3
+   4: if: 2
+   5: call:$0 (3) (@$0)
+   6: if: 1
+   7: call:$0 (4) (@$1)
+   8: call:$0 (4) (@$0)
+   9: call:$0 (3) (@$1)
+end:
+
+states: 1
+startpoint: 0
+calls: 16
+0:  4 ( 5 2 6 ( 7 3)( 8 3))( 6 ( 9 2)( 5 2) 8 3) <0> 
+
+end:
+
+endmodule:

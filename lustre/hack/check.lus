@@ -1,0 +1,229 @@
+include "hack.lus"
+
+
+-- Chapter 2: Boolean Arithmetic
+-- =============================
+-- section 2.2.2
+-- -------------
+
+node Minus (x: bool^16) returns (o: bool^16);
+let
+  o = Add16(Not16(x), [true]|false^15);
+tel
+
+node check_ALU_0 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, true, false, true, false, true, false);
+  o = And16Way(out = false^16) and zr and not ng;
+tel
+
+node check_ALU_1 (x, y: bool^16) returns (o: bool);
+var out, one: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, true, true, true, true, true, true);
+  o = And16Way(out = one) and not zr and not ng;
+  one = [true] | false^15;
+tel
+
+node check_ALU_2 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, true, true, true, false, true, false);
+  o = And16Way(out = true^16) and not zr and ng;
+tel
+
+node check_ALU_3 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, false, false, true, true, false, false);
+  o = And16Way(out = x);
+tel
+
+node check_ALU_4 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, true, true, false, false, false, false);
+  o = And16Way(out = y);
+tel
+
+node check_ALU_5 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, false, false, true, true, false, true);
+  o = And16Way(out = Not16 (x));
+tel
+
+node check_ALU_6 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, true, true, false, false, false, true);
+  o = And16Way(out = Not16 (y));
+tel
+
+node check_ALU_7 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, false, false, true, true, true, true);
+  o = And16Way(out = Minus (x));
+tel
+
+node check_ALU_8 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, true, true, false, false, true, true);
+  o = And16Way(out = Minus (y));
+tel
+
+node check_ALU_9 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, false, true, true, true, true, true);
+  o = And16Way(out = Add16 (x, [true]|false^15));
+tel
+
+node check_ALU_10 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, true, true, false, true, true, true);
+  o = And16Way(out = Add16 (y, [true]|false^15));
+tel
+
+node check_ALU_11 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, false, false, true, true, true, false);
+  o = And16Way(out = Add16 (x, true^16));
+tel
+
+node check_ALU_12 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, true, true, false, false, true, false);
+  o = And16Way(out = Add16 (y, true^16));
+tel
+
+node check_ALU_13 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, false, false, false, false, true, false);
+  o = And16Way(out = Add16 (x, y));
+tel
+
+node check_ALU_14 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, false, true, false, false, true, true);
+  o = And16Way(out = Add16 (x, Minus(y)));
+tel
+
+node check_ALU_15 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, false, false, false, true, true, true);
+  o = And16Way(out = Add16 (y, Minus(x)));
+tel
+
+node check_ALU_16 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, false, false, false, false, false, false);
+  o = And16Way(out = And16 (x, y));
+tel
+
+node check_ALU_17 (x, y: bool^16) returns (o: bool);
+var out: bool^16;
+    zr, ng: bool;
+let
+  out, zr, ng = ALU(x, y, false, true, false, true, false, true);
+  o = And16Way(out = Or16 (x, y));
+tel
+
+-- Chapter 3: Sequential Logic
+-- ===========================
+
+-- section 3.2.4
+-- -------------
+
+node check_PC (i: bool) returns (o: bool)
+var inc, load, reset: bool;
+    out, expected: bool^16;
+
+let
+  inc = false
+        -> pre (false
+        -> pre (false
+        -> pre (false
+        -> pre (true
+        -> pre (true
+        -> pre (true
+        -> pre (true
+        -> pre (true
+        -> pre (true
+        -> pre (true
+        -> pre (true
+        -> pre (false
+        -> pre (false)))))))))))));
+  load = true
+         -> pre (false
+         -> pre (false
+         -> pre (false
+         -> pre (false
+         -> pre (false
+         -> pre (false
+         -> pre (false
+         -> pre (true
+         -> pre (false
+         -> pre (false
+         -> pre (false
+         -> pre (false
+         -> pre (false)))))))))))));
+  reset = false
+          -> pre (false
+          -> pre (true
+          -> pre (false
+          -> pre (false
+          -> pre (false
+          -> pre (false
+          -> pre (false
+          -> pre (false
+          -> pre (false
+          -> pre (false
+          -> pre (false
+          -> pre (false
+          -> pre (false)))))))))))));
+  out = PC (true^8|false^8, inc, load, reset);
+  expected =
+    false^16
+    -> pre ((true^8|false^8)
+    -> pre ((true^8|false^8)
+    -> pre ((false^16)
+    -> pre ((false^16)
+    -> pre ((true^1|false^15)
+    -> pre ((false^1|true^1|false^14)
+    -> pre ((true^2|false^14)
+    -> pre ((false^2|true^1|false^13)
+    -> pre ((true^8|false^8)
+    -> pre ((false^8|true^1|false^7)
+    -> pre ((true^1|false^7|true^1|false^7)
+    -> pre ((false^1|true^1|false^6|true^1|false^7)))))))))))))
+    ;
+  o = And16Way(out = expected);
+tel

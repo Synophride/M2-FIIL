@@ -1,0 +1,244 @@
+-- Implementation du processeur présenté dans
+-- "The Elements of Computing Systems"
+-- Noam Nisan and Shimon Schocken
+-- cf. http://www.idc.ac.il/tecs/
+
+-- Chapter 1: Boolean Logic
+-- ========================
+-- http://www1.idc.ac.il/tecs/book/chapter%2001.pdf
+
+-- section 1.2.2
+-- -------------
+node Nand (a, b: bool) returns (out: bool);
+let
+  out = not (a and b);
+tel
+
+node Mux (a, b, sel: bool) returns (out: bool);
+let
+  out = if sel then b else a;
+tel
+
+node DMux (in, sel: bool) returns (a, b: bool);
+let
+  a, b = (false, false); -- *** TODO ***
+tel
+
+-- node check_mux_dmux ...
+-- *** TODO ***
+
+
+-- section 1.2.3
+-- -------------
+node Not16 (in: bool^16) returns (out: bool^16);
+let
+  out = not(in);
+tel
+
+node And16 (a, b: bool^16) returns (out: bool^16);
+let
+  out = a and b;
+tel
+
+node Or16 (a, b: bool^16) returns (out: bool^16);
+let
+  out = a or b;
+tel
+
+-- Mux
+node Mux_n (const n: int; a, b: bool^n; sel: bool) returns (out: bool^n);
+let
+  out = if sel then b else a;
+tel
+
+node Mux16 (a, b: bool^16; sel: bool) returns (out: bool^16);
+let
+  out = Mux_n (16, a, b, sel);
+tel
+
+-- section 1.2.4
+-- -------------
+-- Or
+node or_n_way (const n: int; in: bool^n) returns (out: bool);
+let
+  assert (n > 0);
+  out = with n = 1 then in[0]
+        else in[0] or or_n_way(n-1, in[1..n-1]);
+tel
+
+node or_n_way_log (const n: int; in: bool^n) returns (out: bool);
+let
+  out = false; -- *** TODO ***
+tel
+
+node Or8Way (in: bool^8) returns (out: bool);
+let
+  out = or_n_way_log(8, in);
+tel
+
+node Or16Way (in: bool^16) returns (out: bool);
+let
+  out = or_n_way_log(16, in);
+tel
+
+-- node check_or_n_way_eq_or_n_way_log ...
+-- *** TODO ***
+
+-- And
+node and_n_way (const n: int; in: bool^n) returns (out: bool);
+let
+  assert (n >= 2);
+  out = with n = 2 then in[0] and in[1]
+        else in[0] and and_n_way(n-1, in[1..n-1]);
+tel
+
+node And8Way (in: bool^8) returns (out: bool);
+let
+  out = and_n_way(8, in);
+tel
+
+node And16Way (in: bool^16) returns (out: bool);
+let
+  out = and_n_way(16, in);
+tel
+
+
+-- Chapter 2: Boolean Arithmetic
+-- =============================
+-- http://www1.idc.ac.il/tecs/book/chapter%2002.pdf
+
+-- section 2.2.1
+-- -------------
+node HalfAdder (a, b : bool) returns (sum, carry : bool);
+let
+  sum = a xor b;
+  carry = a and b;
+tel
+
+node FullAdder (a, b, c : bool) returns (sum, carry : bool);
+var s1,c1,c2:bool;
+let
+  (s1, c1) = HalfAdder (a, b);
+  (sum, c2) = HalfAdder (c, s1);
+  carry = c1 or c2;
+tel
+
+-- node add_n ...
+-- *** TODO ***
+
+node Add16 (x : bool^16; y : bool^16) returns (o: bool^16);
+let
+  o = false^16; -- *** TODO ***
+tel
+
+node Inc16 (x : bool^16) returns (o: bool^16);
+let
+  o = Add16(x, [true]|false^15);
+tel
+
+
+-- section 2.2.2
+-- -------------
+node ALU (in_x, in_y: bool^16; -- Two 16-bits data inputs
+          zx, -- Zero the x input
+          nx, -- Negate the x input
+          zy, -- Zero the y input
+          ny, -- Negate the y input
+          f,  -- Function code:  1 for Add,  0 for And
+          no  -- Negate the out output
+          : bool)
+returns (out: bool^16;
+         zr,  -- True iff out=0
+         ng   -- True iff out<0
+         : bool);
+let
+  -- *** TODO ***
+  out = false^16;
+  zr = false;
+  ng = false;
+tel
+
+
+-- Chapter 3: Sequential Logic
+-- ===========================
+-- http://www1.idc.ac.il/tecs/book/chapter%2003.pdf
+
+-- section 3.2.1
+-- -------------
+
+node DFF (in: bool) returns (out: bool);
+let
+  out = false -> pre in;
+tel
+
+
+-- section 3.2.2
+-- -------------
+
+node Bit (in, load: bool) returns (out: bool);
+let
+  out = false; -- *** TODO ***
+tel
+
+node Register_n (const n: int; in: bool^n; load: bool) returns (out: bool^n);
+let
+  assert (n >= 1);
+  out = with n = 1 then [ Bit (in[0], load) ]
+        else [ Bit (in[0], load) ] | Register_n (n-1, in[1..n-1], load);
+tel
+
+node Register (in: bool^16; load: bool) returns (out: bool^16);
+let
+  out = Register_n (16, in, load);
+tel
+
+
+-- section 3.2.4
+-- -------------
+node PC (in: bool^16; inc, load, reset: bool) returns (out: bool^16);
+let
+  out = false^16; -- *** TODO ***
+tel
+
+
+-- Chapter 5: Computer Architecture
+-- ================================
+-- http://www1.idc.ac.il/tecs/book/chapter%2005.pdf
+
+-- section 5.2.2
+-- -------------
+
+node CPU (inM, instruction: bool^16; reset: bool)
+returns (outM: bool^16; writeM: bool; addressM: bool^15; pc: bool^15);
+let
+  -- *** TODO ***
+  outM = false^16;
+  writeM = false;
+  addressM = false^15;
+  pc = false^15;
+tel
+
+-- Incr Machine :  machine qui incrémente un compteur
+node ROM32K_incr (adress: bool^15) returns (out: bool^16);
+let
+  out = if and_n_way(15, adress = false^15) then
+          -- D = 0
+          true^3 | [false]
+          | [true, false, true, false, true, false]
+          | [ false, true, false ] | false^3
+        else
+          -- D = D + 1
+          true^3 | [false]
+          | [false, true, true, true, true, true]
+          | [ false, true, false ] | false^3;
+tel
+
+node incr_machine (reset: bool) returns (out: bool^16);
+var instruction: bool^16;
+    pc: bool^15;
+    writeM: bool;
+    addressM: bool^15;
+let
+  instruction = ROM32K_incr(pc);
+  out, writeM, addressM, pc = CPU(false^16, instruction, reset);
+tel
