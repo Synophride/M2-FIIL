@@ -1,7 +1,3 @@
-/* returns the absolute value of [x]. */
-
-
-
 /*@ 
   @ ensures \result >= 0;
   @ ensures \result == x || \result == -x; 

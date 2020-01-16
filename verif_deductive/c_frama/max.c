@@ -2,7 +2,7 @@
 /* the code is prettier with this global variable :-p */
 int G;
 
-/*@
+/*@ 
   @ ensures \result == x || \result == y ;
   @ ensures \result >= x && \result >= y ;
   @*/
