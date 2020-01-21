@@ -1,5 +1,5 @@
-CC = g++
-FLAGS = -g -Wall -Wextra -pedantic --std=c++14 -Wfatal-error #-Werror
+CC=g++
+FLAGS=-g -Wall -Wextra -pedantic --std=c++14 -Wfatal-errors -Werror
 
 r: 	tp6
 	./tp6
@@ -19,4 +19,4 @@ tp2:	tp2.cpp
 	$(CC) $(FLAGS) tp2.cpp -o tp2
 
 clean:
-	rm tp1 tp2 tp3 tp4 
+	rm tp1 tp2 tp3 tp4 tp6 
