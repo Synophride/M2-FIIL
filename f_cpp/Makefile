@@ -1,9 +1,11 @@
 CC = g++
-FLAGS = -g -Wall -Wextra -pedantic --std=c++14 #-Werror
+FLAGS = -g -Wall -Wextra -pedantic --std=c++14 -Wfatal-errors #-Werror
 
-r: 	tp3
-	./tp3
+r: 	tp5
+	./tp5
 
+tp5:	tp5.cpp
+	$(CC) $(FLAGS) tp5.cpp -o tp5 
 tp3:	tp3.cpp
 	$(CC) $(FLAGS) tp3.cpp -o tp3 
 tp1:	tp1.cpp
