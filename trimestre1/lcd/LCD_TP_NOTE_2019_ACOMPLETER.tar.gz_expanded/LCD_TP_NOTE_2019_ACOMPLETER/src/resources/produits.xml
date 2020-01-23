@@ -1,0 +1,989 @@
+<catalogue>
+  <produits>
+    <produit categorie="boisson" fournisseur="f1">
+      <nom>Chai</nom>
+      <prix>18.00</prix>
+      <presentation>
+        <nombre>10</nombre>
+        <quantite>20g</quantite>
+        <conditionnement>sachet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="boisson" fournisseur="f1">
+      <nom>Chang</nom>
+      <prix>19.00</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>33cl</quantite>
+        <conditionnement>bouteille</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="condiment" fournisseur="f1">
+      <nom>Aniseed Syrup</nom>
+      <prix>10.00</prix>
+      <presentation>
+        <nombre>12</nombre>
+        <quantite>550ml</quantite>
+        <conditionnement>bouteille</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="condiment" fournisseur="f2">
+      <nom>Chef Anton's Cajun Seasoning</nom>
+      <prix>22.00</prix>
+      <presentation>
+        <nombre>1</nombre>
+        <quantite>170g</quantite>
+        <conditionnement>bocal</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="condiment" fournisseur="f2">
+      <nom>Chef Anton's Gumbo Mix</nom>
+      <prix>21.35</prix>
+      <presentation>
+        <nombre>36</nombre>
+        <quantite>10g</quantite>
+        <conditionnement>sachet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="condiment" fournisseur="f3">
+      <nom>Grandma's Boysenberry Spread</nom>
+      <prix>25.00</prix>
+      <presentation>
+        <nombre>12</nombre>
+        <quantite>200g</quantite>
+        <conditionnement>bocal</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="fruit_legume" fournisseur="f3">
+      <nom>Uncle Bob's Organic Dried Pears</nom>
+      <prix>30.00</prix>
+      <presentation>
+        <nombre>12</nombre>
+        <quantite>250g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="condiment" fournisseur="f3">
+      <nom>Northwoods Cranberry Sauce</nom>
+      <prix>40.00</prix>
+      <presentation>
+        <nombre>12</nombre>
+        <quantite>300g</quantite>
+        <conditionnement>bocal</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="viande" fournisseur="f4">
+      <nom>Mishi Kobe Niku</nom>
+      <prix>97.00</prix>
+      <presentation>
+        <nombre>18</nombre>
+        <quantite>500g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="poisson" fournisseur="f4">
+      <nom>Ikura</nom>
+      <prix>31.00</prix>
+      <presentation>
+        <nombre>12</nombre>
+        <quantite>200g</quantite>
+        <conditionnement>bocal</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="produit_laitier" fournisseur="f5">
+      <nom>Queso Cabrales</nom>
+      <prix>21.00</prix>
+      <presentation>
+        <nombre>1</nombre>
+        <quantite>1000g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="produit_laitier" fournisseur="f5">
+      <nom>Queso Manchego La Pastora</nom>
+      <prix>38.00</prix>
+      <presentation>
+        <nombre>10</nombre>
+        <quantite>500g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="poisson" fournisseur="f6">
+      <nom>Konbu</nom>
+      <prix>6.00</prix>
+      <presentation>
+        <nombre>1</nombre>
+        <quantite>2000g</quantite>
+        <conditionnement>boite</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="fruit_legume" fournisseur="f6">
+      <nom>Tofu</nom>
+      <prix>23.25</prix>
+      <presentation>
+        <nombre>40</nombre>
+        <quantite>100g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="condiment" fournisseur="f6">
+      <nom>Genen Shouyu</nom>
+      <prix>15.50</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>250ml</quantite>
+        <conditionnement>bouteille</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="dessert" fournisseur="f7">
+      <nom>Pavlova</nom>
+      <prix>17.45</prix>
+      <presentation>
+        <nombre>32</nombre>
+        <quantite>500g</quantite>
+        <conditionnement>boite</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="viande" fournisseur="f7">
+      <nom>Alice Mutton</nom>
+      <prix>39.00</prix>
+      <presentation>
+        <nombre>20</nombre>
+        <quantite>1000g</quantite>
+        <conditionnement>conserve</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="poisson" fournisseur="f7">
+      <nom>Carnarvon Tigers</nom>
+      <prix>62.50</prix>
+      <presentation>
+        <nombre>1</nombre>
+        <quantite>3000g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="dessert" fournisseur="f8">
+      <nom>Teatime Chocolate Biscuits</nom>
+      <prix>9.20</prix>
+      <presentation>
+        <nombre>10</nombre>
+        <quantite>100g</quantite>
+        <conditionnement>boite</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="dessert" fournisseur="f8">
+      <nom>Sir Rodney's Marmalade</nom>
+      <prix>81.00</prix>
+      <presentation>
+        <nombre>30</nombre>
+        <quantite>150g</quantite>
+        <conditionnement>boite</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="dessert" fournisseur="f8">
+      <nom>Sir Rodney's Scones</nom>
+      <prix>10.00</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>20g</quantite>
+        <conditionnement>boite</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="cereale" fournisseur="f9">
+      <nom>Gustaf's Knäckebröd</nom>
+      <prix>21.00</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>500g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="cereale" fournisseur="f9">
+      <nom>Tunnbröd</nom>
+      <prix>9.00</prix>
+      <presentation>
+        <nombre>12</nombre>
+        <quantite>250g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="boisson" fournisseur="f10">
+      <nom>Guaraná Fantástica</nom>
+      <prix>4.50</prix>
+      <presentation>
+        <nombre>12</nombre>
+        <quantite>355ml</quantite>
+        <conditionnement>bouteille</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="dessert" fournisseur="f11">
+      <nom>NuNuCa Nuß-Nougat-Creme</nom>
+      <prix>14.00</prix>
+      <presentation>
+        <nombre>20</nombre>
+        <quantite>450g</quantite>
+        <conditionnement>bocal</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="dessert" fournisseur="f11">
+      <nom>Gumbär Gummibärchen</nom>
+      <prix>31.23</prix>
+      <presentation>
+        <nombre>100</nombre>
+        <quantite>250g</quantite>
+        <conditionnement>sachet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="dessert" fournisseur="f11">
+      <nom>Schoggi Schokolade</nom>
+      <prix>43.90</prix>
+      <presentation>
+        <nombre>100</nombre>
+        <quantite>100g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="fruit_legume" fournisseur="f12">
+      <nom>Rössle Sauerkraut</nom>
+      <prix>45.60</prix>
+      <presentation>
+        <nombre>25</nombre>
+        <quantite>825g</quantite>
+        <conditionnement>bocal</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="viande" fournisseur="f12">
+      <nom>Thüringer Rostbratwurst</nom>
+      <prix>123.79</prix>
+      <presentation>
+        <nombre>50</nombre>
+        <quantite>100g</quantite>
+        <conditionnement>sachet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="poisson" fournisseur="f13">
+      <nom>Nord-Ost Matjeshering</nom>
+      <prix>25.89</prix>
+      <presentation>
+        <nombre>10</nombre>
+        <quantite>200g</quantite>
+        <conditionnement>bocal</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="produit_laitier" fournisseur="f14">
+      <nom>Gorgonzola Telino</nom>
+      <prix>12.50</prix>
+      <presentation>
+        <nombre>12</nombre>
+        <quantite>100g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="produit_laitier" fournisseur="f14">
+      <nom>Mascarpone Fabioli</nom>
+      <prix>32.00</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>200g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="produit_laitier" fournisseur="f15">
+      <nom>Geitost</nom>
+      <prix>2.50</prix>
+      <presentation>
+        <nombre>1</nombre>
+        <quantite>500g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="boisson" fournisseur="f16">
+      <nom>Sasquatch Ale</nom>
+      <prix>14.00</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>33cl</quantite>
+        <conditionnement>bouteille</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="boisson" fournisseur="f16">
+      <nom>Steeleye Stout</nom>
+      <prix>18.00</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>33cl</quantite>
+        <conditionnement>bouteille</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="poisson" fournisseur="f17">
+      <nom>Inlagd Sill</nom>
+      <prix>19.00</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>250g</quantite>
+        <conditionnement>bocal</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="poisson" fournisseur="f17">
+      <nom>Gravad lax</nom>
+      <prix>26.00</prix>
+      <presentation>
+        <nombre>12</nombre>
+        <quantite>500g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="boisson" fournisseur="f18">
+      <nom>Côte de Blaye</nom>
+      <prix>263.50</prix>
+      <presentation>
+        <nombre>12</nombre>
+        <quantite>75cl</quantite>
+        <conditionnement>bouteille</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="boisson" fournisseur="f18">
+      <nom>Chartreuse verte</nom>
+      <prix>18.00</prix>
+      <presentation>
+        <nombre>1</nombre>
+        <quantite>75cl</quantite>
+        <conditionnement>bouteille</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="poisson" fournisseur="f19">
+      <nom>Boston Crab Meat</nom>
+      <prix>18.40</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>40g</quantite>
+        <conditionnement>conserve</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="poisson" fournisseur="f19">
+      <nom>Jack's New England Clam Chowder</nom>
+      <prix>9.65</prix>
+      <presentation>
+        <nombre>12</nombre>
+        <quantite>300g</quantite>
+        <conditionnement>conserve</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="cereale" fournisseur="f20">
+      <nom>Singaporean Hokkien Fried Mee</nom>
+      <prix>14.00</prix>
+      <presentation>
+        <nombre>32</nombre>
+        <quantite>1000g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="boisson" fournisseur="f20">
+      <nom>Ipoh Coffee</nom>
+      <prix>46.00</prix>
+      <presentation>
+        <nombre>16</nombre>
+        <quantite>500g</quantite>
+        <conditionnement>conserve</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="condiment" fournisseur="f20">
+      <nom>Gula Malacca</nom>
+      <prix>19.45</prix>
+      <presentation>
+        <nombre>20</nombre>
+        <quantite>2000g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="poisson" fournisseur="f21">
+      <nom>Rogede sild</nom>
+      <prix>9.50</prix>
+      <presentation>
+        <nombre>1</nombre>
+        <quantite>1000g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="poisson" fournisseur="f21">
+      <nom>Spegesild</nom>
+      <prix>12.00</prix>
+      <presentation>
+        <nombre>4</nombre>
+        <quantite>450g</quantite>
+        <conditionnement>bocal</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="dessert" fournisseur="f22">
+      <nom>Zaanse koeken</nom>
+      <prix>9.50</prix>
+      <presentation>
+        <nombre>10</nombre>
+        <quantite>100g</quantite>
+        <conditionnement>boite</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="dessert" fournisseur="f22">
+      <nom>Chocolade</nom>
+      <prix>12.75</prix>
+      <presentation>
+        <nombre>12</nombre>
+        <quantite>50g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="dessert" fournisseur="f23">
+      <nom>Maxilaku</nom>
+      <prix>20.00</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>50g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="dessert" fournisseur="f23">
+      <nom>Valkoinen suklaa</nom>
+      <prix>16.25</prix>
+      <presentation>
+        <nombre>12</nombre>
+        <quantite>100g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="fruit_legume" fournisseur="f24">
+      <nom>Manjimup Dried Apples</nom>
+      <prix>53.00</prix>
+      <presentation>
+        <nombre>50</nombre>
+        <quantite>300g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="cereale" fournisseur="f24">
+      <nom>Filo Mix</nom>
+      <prix>7.00</prix>
+      <presentation>
+        <nombre>16</nombre>
+        <quantite>2000g</quantite>
+        <conditionnement>boite</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="viande" fournisseur="f24">
+      <nom>Perth Pasties</nom>
+      <prix>32.80</prix>
+      <presentation>
+        <nombre>48</nombre>
+        <quantite>10g</quantite>
+        <conditionnement>sachet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="viande" fournisseur="f25">
+      <nom>Tourtière</nom>
+      <prix>7.45</prix>
+      <presentation>
+        <nombre>16</nombre>
+        <quantite>20g</quantite>
+        <conditionnement>sachet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="viande" fournisseur="f25">
+      <nom>Pâté chinois</nom>
+      <prix>24.00</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>100g</quantite>
+        <conditionnement>boite</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="cereale" fournisseur="f26">
+      <nom>Gnocchi di nonna Alice</nom>
+      <prix>38.00</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>250g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="cereale" fournisseur="f26">
+      <nom>Ravioli Angelo</nom>
+      <prix>19.50</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>250g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="poisson" fournisseur="f27">
+      <nom>Escargots de Bourgogne</nom>
+      <prix>13.25</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>100g</quantite>
+        <conditionnement>boite</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="produit_laitier" fournisseur="f28">
+      <nom>Raclette Courdavault</nom>
+      <prix>55.00</prix>
+      <presentation>
+        <nombre>1</nombre>
+        <quantite>2000g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="produit_laitier" fournisseur="f28">
+      <nom>Camembert Pierrot</nom>
+      <prix>34.00</prix>
+      <presentation>
+        <nombre>15</nombre>
+        <quantite>300g</quantite>
+        <conditionnement>boite</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="condiment" fournisseur="f29">
+      <nom>Sirop d'érable</nom>
+      <prix>28.50</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>500ml</quantite>
+        <conditionnement>bouteille</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="dessert" fournisseur="f29">
+      <nom>Tarte au sucre</nom>
+      <prix>49.30</prix>
+      <presentation>
+        <nombre>48</nombre>
+        <quantite>100g</quantite>
+        <conditionnement>sachet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="condiment" fournisseur="f7">
+      <nom>Vegie-spread</nom>
+      <prix>43.90</prix>
+      <presentation>
+        <nombre>15</nombre>
+        <quantite>625g</quantite>
+        <conditionnement>bocal</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="cereale" fournisseur="f12">
+      <nom>Wimmers gute Semmelknödel</nom>
+      <prix>33.25</prix>
+      <presentation>
+        <nombre>20</nombre>
+        <quantite>100g</quantite>
+        <conditionnement>sachet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="condiment" fournisseur="f2">
+      <nom>Louisiana Fiery Hot Pepper Sauce</nom>
+      <prix>21.05</prix>
+      <presentation>
+        <nombre>32</nombre>
+        <quantite>33cl</quantite>
+        <conditionnement>bouteille</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="condiment" fournisseur="f2">
+      <nom>Louisiana Hot Spiced Okra</nom>
+      <prix>17.00</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>100ml</quantite>
+        <conditionnement>bocal</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="boisson" fournisseur="f16">
+      <nom>Laughing Lumberjack Lager</nom>
+      <prix>14.00</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>33cl</quantite>
+        <conditionnement>bouteille</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="dessert" fournisseur="f8">
+      <nom>Scottish Longbreads</nom>
+      <prix>12.50</prix>
+      <presentation>
+        <nombre>10</nombre>
+        <quantite>100g</quantite>
+        <conditionnement>boite</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="produit_laitier" fournisseur="f15">
+      <nom>Gudbrandsdalsost</nom>
+      <prix>36.00</prix>
+      <presentation>
+        <nombre>1</nombre>
+        <quantite>1000g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="boisson" fournisseur="f7">
+      <nom>Outback Lager</nom>
+      <prix>15.00</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>355ml</quantite>
+        <conditionnement>bouteille</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="produit_laitier" fournisseur="f15">
+      <nom>Flotemysost</nom>
+      <prix>21.50</prix>
+      <presentation>
+        <nombre>10</nombre>
+        <quantite>500g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="produit_laitier" fournisseur="f14">
+      <nom>Mozzarella di Giovanni</nom>
+      <prix>34.80</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>200g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="poisson" fournisseur="f17">
+      <nom>Röd Kaviar</nom>
+      <prix>15.00</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>150g</quantite>
+        <conditionnement>bocal</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="fruit_legume" fournisseur="f4">
+      <nom>Longlife Tofu</nom>
+      <prix>10.00</prix>
+      <presentation>
+        <nombre>1</nombre>
+        <quantite>500g</quantite>
+        <conditionnement>paquet</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="boisson" fournisseur="f12">
+      <nom>Rhönbräu Klosterbier</nom>
+      <prix>7.75</prix>
+      <presentation>
+        <nombre>24</nombre>
+        <quantite>500ml</quantite>
+        <conditionnement>bouteille</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="boisson" fournisseur="f23">
+      <nom>Lakkalikööri</nom>
+      <prix>18.00</prix>
+      <presentation>
+        <nombre>1</nombre>
+        <quantite>500ml</quantite>
+        <conditionnement>bouteille</conditionnement>
+      </presentation>
+    </produit>
+    <produit categorie="condiment" fournisseur="f12">
+      <nom>Original Frankfurter grüne Soße</nom>
+      <prix>13.00</prix>
+      <presentation>
+        <nombre>12</nombre>
+        <quantite>100g</quantite>
+        <conditionnement>boite</conditionnement>
+      </presentation>
+    </produit>
+  </produits>
+  <fournisseurs>
+    <fournisseur id="f1">
+      <nom>Exotic Liquids</nom>
+      <adresse>
+        <rue>49 Gilbert St.</rue>
+        <ville>London</ville>
+        <region></region>
+        <code_postal>EC1 4SD</code_postal>
+        <pays>UK</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f2">
+      <nom>New Orleans Cajun Delights</nom>
+      <adresse>
+        <rue>P.O. Box 78934</rue>
+        <ville>New Orleans</ville>
+        <region>LA</region>
+        <code_postal>70117</code_postal>
+        <pays>USA</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f3">
+      <nom>Grandma Kelly's Homestead</nom>
+      <adresse>
+        <rue>707 Oxford Rd.</rue>
+        <ville>Ann Arbor</ville>
+        <region>MI</region>
+        <code_postal>48104</code_postal>
+        <pays>USA</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f4">
+      <nom>Tokyo Traders</nom>
+      <adresse>
+        <rue>9-8 Sekimai Musashino-shi</rue>
+        <ville>Tokyo</ville>
+        <region></region>
+        <code_postal>100</code_postal>
+        <pays>Japan</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f5">
+      <nom>Cooperativa de Quesos 'Las Cabras'</nom>
+      <adresse>
+        <rue>Calle del Rosal 4</rue>
+        <ville>Oviedo</ville>
+        <region>Asturias</region>
+        <code_postal>33007</code_postal>
+        <pays>Spain</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f6">
+      <nom>Mayumi's</nom>
+      <adresse>
+        <rue>92 Setsuko Chuo-ku</rue>
+        <ville>Osaka</ville>
+        <region></region>
+        <code_postal>545</code_postal>
+        <pays>Japan</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f7">
+      <nom>Pavlova</nom>
+      <adresse>
+        <rue>74 Rose St. Moonie Ponds</rue>
+        <ville>Melbourne</ville>
+        <region>Victoria</region>
+        <code_postal>3058</code_postal>
+        <pays>Australia</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f8">
+      <nom>Specialty Biscuits</nom>
+      <adresse>
+        <rue>29 King's Way</rue>
+        <ville>Manchester</ville>
+        <region></region>
+        <code_postal>M14 GSD</code_postal>
+        <pays>UK</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f9">
+      <nom>PB Knäckebröd AB</nom>
+      <adresse>
+        <rue>Kaloadagatan 13</rue>
+        <ville>Göteborg</ville>
+        <region></region>
+        <code_postal>S-345 67</code_postal>
+        <pays>Sweden</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f10">
+      <nom>Refrescos Americanas LTDA</nom>
+      <adresse>
+        <rue>Av. das Americanas 12.890</rue>
+        <ville>Sao Paulo</ville>
+        <region></region>
+        <code_postal>5442</code_postal>
+        <pays>Brazil</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f11">
+      <nom>Heli Süßwaren GmbH &amp; Co. KG</nom>
+      <adresse>
+        <rue>Tiergartenstraße 5</rue>
+        <ville>Berlin</ville>
+        <region></region>
+        <code_postal>10785</code_postal>
+        <pays>Germany</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f12">
+      <nom>Plutzer Lebensmittelgroßmärkte AG</nom>
+      <adresse>
+        <rue>Bogenallee 51</rue>
+        <ville>Frankfurt</ville>
+        <region></region>
+        <code_postal>60439</code_postal>
+        <pays>Germany</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f13">
+      <nom>Nord-Ost-Fisch Handelsgesellschaft mbH</nom>
+      <adresse>
+        <rue>Frahmredder 112a</rue>
+        <ville>Cuxhaven</ville>
+        <region></region>
+        <code_postal>27478</code_postal>
+        <pays>Germany</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f14">
+      <nom>Formaggi Fortini s.r.l.</nom>
+      <adresse>
+        <rue>Viale Dante 75</rue>
+        <ville>Ravenna</ville>
+        <region></region>
+        <code_postal>48100</code_postal>
+        <pays>Italy</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f15">
+      <nom>Norske Meierier</nom>
+      <adresse>
+        <rue>Hatlevegen 5</rue>
+        <ville>Sandvika</ville>
+        <region></region>
+        <code_postal>1320</code_postal>
+        <pays>Norway</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f16">
+      <nom>Bigfoot Breweries</nom>
+      <adresse>
+        <rue>3400 - 8th Avenue Suite 210</rue>
+        <ville>Bend</ville>
+        <region>OR</region>
+        <code_postal>97101</code_postal>
+        <pays>USA</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f17">
+      <nom>Svensk Sjöföda AB</nom>
+      <adresse>
+        <rue>Brovallavägen 231</rue>
+        <ville>Stockholm</ville>
+        <region></region>
+        <code_postal>S-123 45</code_postal>
+        <pays>Sweden</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f18">
+      <nom>Aux joyeux ecclésiastiques</nom>
+      <adresse>
+        <rue>203, Rue des Francs-Bourgeois</rue>
+        <ville>Paris</ville>
+        <region></region>
+        <code_postal>75004</code_postal>
+        <pays>France</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f19">
+      <nom>New England Seafood Cannery</nom>
+      <adresse>
+        <rue>Order Processing Dept. 2100 Paul Revere Blvd.</rue>
+        <ville>Boston</ville>
+        <region>MA</region>
+        <code_postal>02134</code_postal>
+        <pays>USA</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f20">
+      <nom>Leka Trading</nom>
+      <adresse>
+        <rue>471 Serangoon Loop</rue>
+        <ville>Singapore</ville>
+        <region></region>
+        <code_postal>0512</code_postal>
+        <pays>Singapore</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f21">
+      <nom>Lyngbysild</nom>
+      <adresse>
+        <rue>Lyngbysild Fiskebakken 10</rue>
+        <ville>Lyngby</ville>
+        <region></region>
+        <code_postal>2800</code_postal>
+        <pays>Denmark</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f22">
+      <nom>Zaanse Snoepfabriek</nom>
+      <adresse>
+        <rue>Verkoop Rijnweg 22</rue>
+        <ville>Zaandam</ville>
+        <region></region>
+        <code_postal>9999 ZZ</code_postal>
+        <pays>Netherlands</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f23">
+      <nom>Karkki Oy</nom>
+      <adresse>
+        <rue>Valtakatu 12</rue>
+        <ville>Lappeenranta</ville>
+        <region></region>
+        <code_postal>53120</code_postal>
+        <pays>Finland</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f24">
+      <nom>G'day</nom>
+      <adresse>
+        <rue>170 Prince Edward Parade Hunter's Hill</rue>
+        <ville>Sydney</ville>
+        <region>NSW</region>
+        <code_postal>2042</code_postal>
+        <pays>Australia</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f25">
+      <nom>Ma Maison</nom>
+      <adresse>
+        <rue>2960 Rue St. Laurent</rue>
+        <ville>Montréal</ville>
+        <region>Québec</region>
+        <code_postal>H1J 1C3</code_postal>
+        <pays>Canada</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f26">
+      <nom>Pasta Buttini s.r.l.</nom>
+      <adresse>
+        <rue>Via dei Gelsomini 153</rue>
+        <ville>Salerno</ville>
+        <region></region>
+        <code_postal>84100</code_postal>
+        <pays>Italy</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f27">
+      <nom>Escargots Nouveaux</nom>
+      <adresse>
+        <rue>22 rue H. Voiron</rue>
+        <ville>Montceau</ville>
+        <region></region>
+        <code_postal>71300</code_postal>
+        <pays>France</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f28">
+      <nom>Gai pâturage</nom>
+      <adresse>
+        <rue>Bat. B 3, rue des Alpes</rue>
+        <ville>Annecy</ville>
+        <region></region>
+        <code_postal>74000</code_postal>
+        <pays>France</pays>
+      </adresse>
+    </fournisseur>
+    <fournisseur id="f29">
+      <nom>Forêts d'érables</nom>
+      <adresse>
+        <rue>148 rue Chasseur</rue>
+        <ville>Ste-Hyacinthe</ville>
+        <region>Québec</region>
+        <code_postal>J2S 7S8</code_postal>
+        <pays>Canada</pays>
+      </adresse>
+    </fournisseur>
+  </fournisseurs>
+</catalogue>

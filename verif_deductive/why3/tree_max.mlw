@@ -1,0 +1,32 @@
+predicate _TO_BE_COMPLETED
+(* replace all occurrences of _TO_BE_COMPLETED below *)
+
+use int.Int
+
+type tree 'a = Leaf | Node (tree 'a) 'a (tree 'a)
+
+predicate tree_mem (x: int) (t: tree int) = match t with
+  | Node l v r -> tree_mem x l \/ x = v \/ tree_mem x r
+  | Leaf       -> false
+end
+
+let function max (x y: int) : int = if x >= y then x else y
+
+let function isLeaf (x : tree int) =
+    match x with | Leaf -> true | Node _ _ _ -> false 
+    end
+let rec tree_max (t: tree int) : int
+  requires { t <> Leaf }
+  ensures  { forall i:int. tree_mem i t -> i <= result }
+= 
+    match t with 
+    | Node sag i sad 
+    ->  if isLeaf sag 
+        then if isLeaf sad 
+             then i
+             else max i (tree_max sad)
+        else if isLeaf sad
+        then max i (tree_max sag)
+        else max i (max (tree_max sag) (tree_max sad))
+    | Leaf -> absurd
+    end
