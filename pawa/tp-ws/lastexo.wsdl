@@ -1,0 +1,35 @@
+<definitions
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:tns="urn:exemple"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    targetNamespace="urn:exemple"
+    name="exempleService">
+
+
+  <message name="retourDateRequest"/>
+
+  <message name="retourDateResponse">
+    <part name="retourDateReturn"></part>
+  </message>
+  <!-- les messages peuvent etre définis ici -->
+  <portType name="essai_instancePortType">
+    <operation name="instanceport"> <!-- Nom de l'opération --> 
+      <input message="tsn:retourDateRequest"></input>    <!-- Message associé à l'opération-->
+      <output message="tsn:retourDateReturn"></output>  <!-- Message rendu en tant que réponse -->
+    </operation>
+  </portType>
+
+  <binding name="essai_instanceBinding"
+	   type="...">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"></soap:binding>
+    <operation name="...">
+    </operation>
+  </binding>
+
+  <service name="exempleService">
+    <port>
+
+    </port>
+  </service>
+</definitions>

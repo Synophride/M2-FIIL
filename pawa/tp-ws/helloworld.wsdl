@@ -1,0 +1,45 @@
+<definitions 
+    xmlns:soap ="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:tns ="tp.serviceweb" 
+    xmlns:xsd ="http://www.w3.org/2001/XMLSchema" 
+    xmlns ="http://schemas.xmlsoap.org/wsdl/" 
+    targetNamespace ="tp.serviceweb" 
+    name ="HelloWorldService">
+
+  <message name ="HelloWorldRequest">
+    <part name ="name" type ="xsd:string"></part>
+  </message > 
+  <message name ="HelloWorldResponse"> 
+    <part name ="return" type="xsd:string"></part>
+  </message > 
+
+  <portType name ="HelloWorld"> 
+    <operation name ="sayHello"> 
+      <input message ="tns:HelloWorldRequest"></input> 
+      <output message ="tns:HelloWorldResponse"></output> 
+    </operation > 
+  </portType > 
+
+  <binding name ="HelloWorldPortBinding" type ="tns:HelloWorld"> 
+
+    <soap:binding transport ="http://schemas.xmlsoap.org/soap/http" style 
+		  ="rpc"></soap:binding >
+
+    <operation name ="sayHello"> 
+      <soap:operation soapAction ="sayHello"></soap:operation>
+      <input>
+	<soap:body use="literal" namespace="tp.serviceweb"></soap:body>
+      </input>
+      <output>
+	<soap:body use="literal" namespace="tp.serviceweb"></soap:body>
+      </output>
+    </operation>
+
+  </binding>
+
+  <service name="HelloWorldService"> 
+    <port name="HelloWorldPort" binding="tns:HelloWorldPortBinding">
+      <soap:address location ="http://localhost:8080/helloworld.php"></soap:address>
+    </port> 
+  </service>
+</definitions>
