@@ -21,10 +21,10 @@ tel
 
 node check_ALU_1 (x, y: bool^16) returns (o: bool);
 var out, one: bool^16;
-    zr, ng: bool;
+    zr , ng : bool;
 let
   out, zr, ng = ALU(x, y, true, true, true, true, true, true);
-  o = And16Way(out = one) and not zr and not ng;
+  o = And16Way(out) and And16Way(one) and not(zr) and not(ng);
   one = [true] | false^15;
 tel
 

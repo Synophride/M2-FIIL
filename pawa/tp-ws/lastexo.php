@@ -1,11 +1,14 @@
 <?php
 
-function instanceport($param){
-    
+function date($param){
+    $d = getdate();
+    $signature = $SERVER_SIGNATURE;
+    return string(d) . $signature;
 }
 
-$server = new SoapServer("helloworld.wsdl");
+$server = new SoapServer("lastexo.wsdl");
 
-$server->addFunction("instanceport");
+$server->addFunction("date");
 $server->handle();
+
 ?>

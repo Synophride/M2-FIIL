@@ -1,34 +1,16 @@
-(* Frama-C journal generated at 15:56 the 19/12/2019 *)
+(* Frama-C journal generated at 03:18 the 23/01/2020 *)
 
 exception Unreachable
 exception Exception of string
 
 (* Run the user commands *)
 let run () =
-  Dynamic.Parameter.String.set "" "./abs.c";
+  Project.set_keep_current false;
+  File.init_from_cmdline ();
+  Dynamic.Parameter.String.set ""
+    "/home/mono/m2/verif_deductive/c_frama/sum.c";
   File.init_from_cmdline ();
   Project.set_keep_current false;
-  Project.clear
-    ~selection:(State_selection.of_list
-                  [ State.get "Report.print_once";
-                    State.get "Report.print_csv_once";
-                    State.get "Consolidation graph";
-                    State.get "Consolidated_status" ])
-    ();
-  Project.clear
-    ~selection:(State_selection.of_list
-                  [ State.get "Report.print_once";
-                    State.get "Report.print_csv_once";
-                    State.get "Consolidation graph";
-                    State.get "Consolidated_status" ])
-    ();
-  Project.clear
-    ~selection:(State_selection.of_list
-                  [ State.get "Report.print_once";
-                    State.get "Report.print_csv_once";
-                    State.get "Consolidation graph";
-                    State.get "Consolidated_status" ])
-    ();
   ()
 
 (* Main *)

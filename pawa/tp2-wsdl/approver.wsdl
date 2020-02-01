@@ -1,0 +1,45 @@
+<definitions 
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:tns="tp.serviceweb" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://schemas.xmlsoap.org/wsdl/" 
+	targetNamespace="tp.serviceweb" 
+	name="ApproverService">
+
+<message name="RequestMessage">
+	<part name="fistName" type="xsd:string"/>
+	<part name="lastName" type="xsd:string"/>
+	<part name="amount" type="xsd:int"/>
+</message>
+<message name="ResponseMessage">
+	<part name="return" type="xsd:string"/>
+</message>
+
+<portType name="ApproverPortType">
+	<operation name="approvalRequest">
+		<input  message="tns:RequestMessage"/>
+		<output message="tns:ResponseMessage"/>
+	</operation>
+</portType>
+
+<binding name="ApproverPortBinding" type="tns:ApproverPortType">
+
+	<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+
+	<operation name="approvalRequest">
+		<soap:operation soapAction="approvalRequest"/>
+		<input>
+			<soap:body use="literal" namespace="tpr.serviceweb"/>
+		</input>
+		<output>
+			<soap:body use="literal" namespace="tpr.serviceweb"/>
+		</output>
+	</operation>
+</binding>
+
+<service name="ApproverService">
+<port name="ApproverPort" binding="tns:ApproverPortBinding">
+<soap:address location="https://nhnghia.herokuapp.com/tp-ws/loan/approver.php"/>
+</port>
+</service>
+</definitions>

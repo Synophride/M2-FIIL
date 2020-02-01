@@ -7,29 +7,48 @@
     name="exempleService">
 
 
-  <message name="retourDateRequest"/>
-
-  <message name="retourDateResponse">
-    <part name="retourDateReturn"></part>
+  <message name="retourDateRequest">
+    <part name="requete" type="xsd:string"> </part>
   </message>
+  
+  <message name="retourDateResponse">
+    <part name="retourDateReturn" type="xsd:string"> </part>
+  </message>
+
   <!-- les messages peuvent etre définis ici -->
   <portType name="essai_instancePortType">
-    <operation name="instanceport"> <!-- Nom de l'opération --> 
-      <input message="tsn:retourDateRequest"></input>    <!-- Message associé à l'opération-->
-      <output message="tsn:retourDateReturn"></output>  <!-- Message rendu en tant que réponse -->
+    <!-- Nom de l'opération -->
+    <operation name="date">
+      
+      <!-- Message associé à la requête-->
+      <input message="tns:retourDateRequest"></input>
+
+      <!-- Message rendu en tant que réponse -->
+      <output message="tns:retourDateReturn"></output>
     </operation>
   </portType>
 
   <binding name="essai_instanceBinding"
-	   type="...">
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"></soap:binding>
-    <operation name="...">
+	   type="tsn:RetourDateRequest">
+    
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"
+		  style="rpc"></soap:binding>
+
+    <operation name="date">
+      <soap:operation soapAction="date"> </soap:operation>
+      <input>
+	<soap:body use="literal" namespace="tp.serviceweb"> </soap:body>
+      </input>
+      <output>
+	<soap:body use="literal" namespace="tp.serviceweb"> </soap:body>
+      </output>
     </operation>
   </binding>
 
   <service name="exempleService">
     <port>
-
+      <soap:address location="http://localhost:8080/lastexo.php">
+      </soap:address> 
     </port>
   </service>
 </definitions>

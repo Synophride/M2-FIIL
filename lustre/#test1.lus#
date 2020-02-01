@@ -1,0 +1,8 @@
+node fibo(input: int)
+returns (N:int);
+var pn : int;
+let
+  pn= 1 ->  pre(N);
+  N = 1 -> (pre(pn) + pn);
+tel
+;

@@ -124,6 +124,7 @@ let
   sum = a xor b;
   carry = a and b;
 tel
+
 node FullAdder (a, b, c : bool) returns (sum, carry : bool);
 var s1,c1,c2:bool;
 let
@@ -135,11 +136,11 @@ tel
 node add_n (const n : int; x, y : bool^n;  carry: bool)
 returns (sum : bool^n);
 var s1, c1: bool;
-let
+let 
   assert(n>0);
-  (s1, c1) = FullAdder(x[n-1], y[n-1], carry);
+  (s1, c1) = FullAdder(x[0], y[0], carry);
   sum = with n=1 then [s1]
-        else add_n((n-1), x[0..n-2], y[0..n-2], c1) | [s1];
+        else add_n((n-1), x[1..n-1], y[1..n-1], c1) | [s1];
 tel
 
 node Add16 (x : bool^16; y : bool^16) returns (o: bool^16);
@@ -167,17 +168,17 @@ returns (out: bool^16;
          zr,  -- True iff out=0
          ng   -- True iff out<0
          : bool);
-var zeroedx, negx, zeroedy, negy, outbis : bool^16;
+var zeroedx, x, zeroedy, y, result :bool^16;
 let
-  zeroedx = if zx then false^16 else in_x;
-  negx = if nx then Not16(in_x) else zeroedx;
+  zeroedx = Mux16(in_x, 0^16, zx);
+  x  = Mux16(zeroedx, Not16(zeroedx), nx);
 
-  zeroedy = if zy then false^16 else in_y;
-  negy = if ny then Not16(in_y) else zeroedy;
+  zeroedy = Mux16(in_y, 0^16, zy);
+  y  = Mux16(zeroedy, Not16(zeroedy), ny);
   
-  outbis = if f then Add16(negx, negy) else And16(negx, negy);
-  out = if no then Not16(outbis) else outbis; 
-  zr = not (Or16Way(out));
+  result = Mux16(And16(x, y), Add16(x, y), f);
+  out = Mux16(result, Not16(result), no);
+  zr = not( Or16Way(out) );
   ng = out[0];
 tel
 

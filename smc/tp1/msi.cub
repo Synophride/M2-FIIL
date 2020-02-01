@@ -1,0 +1,36 @@
+(* * (M)odified : Les données sont en train d'être modifiées, donc les données sont incohérentes
+   * (S)hared   : Les données sont lues par certains processus = Les données dans le caches peuvent être dans le cache d'autres proc
+   * (I)nvalid  : Les données dans le cache sont invalides
+   *)
+type state = M | S | I
+
+array Cache[proc] : state
+
+
+init(i) {
+  Cache[i] = I
+}
+
+unsafe(i j)
+{ (i <> j) && (Cache[i] = M) && (Cache[j] <> I) }
+
+(* Lecture dans le cache *)
+transition read(i)
+requires {
+  forall j. (j = i || Cache[j] <> M)
+}{
+  Cache[i] := S;
+}
+
+(* Tentative d'écrire dans le cache *) 
+transition write(i)
+requires { 
+ forall j. (j = i || Cache[j] <> M)
+}{
+  Cache[j] := case
+  	      | j = i : M
+  	      | Cache[j] = S : I
+	      | Cache[j] = I : I
+	      | j <> i && Cache[j] = M : M; 
+	      
+}

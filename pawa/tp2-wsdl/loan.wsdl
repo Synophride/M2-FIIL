@@ -1,0 +1,41 @@
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	     xmlns:tns="tp.serviceweb"
+	     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	     xmlns="http://schemas.xmlsoap.org/wsdl/"
+	     targetNamespace="tp.serviceweb"
+	     name="LoanService">
+
+  <message name ="pretRequest">
+    <part name="montant" type="xsd:int"></part>
+    <part name="nom" type="xsd:string"> </part>
+    <part name="prenom" type="xsd:string"></part>  
+  </message>
+  <message  name ="pretResponse">
+    <part name="accepted" type="xsd:bool"></part>
+  </message >
+
+  <portType name="Pret">
+    <operation name="demandeDePret">
+      <input message="tns:pretRequest"> </input>
+      <output message="tns:pretResponse"> </output>
+    </operation> 
+  </portType>
+  
+  <binding  name="LoanPortBinding" type="tns:LoanPortType">
+    <soap:binding  transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+    <operation  name="loanRequest">
+      <soap:operation soapAction="loanRequest"/>
+      <input>
+	<soap:body  use="literal" namespace="tp.serviceweb" />
+      </input>
+      <output>
+	<soap:body  use="literal" namespace="tp.serviceweb"/>
+      </output>
+    </operation>
+  </binding>  
+  <service name="LoanService">
+    <port name="LoanPort" binding="tns:LoanPortBinding">
+      <soap:address location="http://localhost:8080/loan.php"/>
+    </port>
+  </service>
+</definitions>

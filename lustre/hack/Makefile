@@ -20,4 +20,4 @@ clean:
 	@rm -f *.ec *.oc *.o $(NODE).c $(NODE).h $(NODE)_loop.c
 
 cleanall: clean
-	@rm -f *.bak *~ $(NODE)
+	@rm -f *.bak *~ $(NODE)  *.c *.h 

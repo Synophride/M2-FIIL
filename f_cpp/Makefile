@@ -1,8 +1,11 @@
 CC=g++
 FLAGS=-g -Wall -Wextra -pedantic --std=c++14 -Wfatal-errors -Werror
 
-r: 	tp6
-	./tp6
+r: 	tpnote
+	./tpnote
+
+tpnote: tpnote.cpp
+	$(CC) $(FLAGS) tpnote.cpp -o tpnote
 
 tp6:	tp6.cpp
 	$(CC) $(FLAGS) tp6.cpp -o tp6 
