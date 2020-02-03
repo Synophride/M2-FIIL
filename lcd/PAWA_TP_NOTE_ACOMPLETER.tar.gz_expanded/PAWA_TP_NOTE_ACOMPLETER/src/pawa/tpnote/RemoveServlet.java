@@ -1,11 +1,9 @@
-package pawa.tp03;
+package pawa.tpnote;
 
 import java.io.IOException;
+import java.net.URL;
 
 import javax.json.Json;
-import javax.json.JsonBuilderFactory;
-import javax.json.JsonObject;
-import javax.json.JsonObjectBuilder;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,22 +13,33 @@ import javax.servlet.http.HttpServletResponse;
 
 
 //La classe du contrôleur
-@WebServlet("/MovieWSServlet")
-public class MovieWSServlet extends HttpServlet {
+@WebServlet("/RemoveServlet")
+public class RemoveServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 6489069438791307255L;
 
- 
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+	/**
+	 * QUESTION 1.3.1
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
-			Integer from = Integer.getInteger(request.getParameter("from"), 0);
-			Integer to = Integer.getInteger(request.getParameter("to"), from + 10 );
-			// TODO 
+			String str_hash = request.getParameter("hash");
+			String str_pass = request.getParameter("pass");
 			
-			
+			if("format".equals(request.getAttribute("format"))) {
+				// JSon
+				
+			} else {
+				
+			}
+	
 			
 		} catch (Exception e) { throw new ServletException(e); }
+		
 		
 	}
 

@@ -1,0 +1,25 @@
+NOM: Julien
+PRÉNOM: Guyot
+
+
+
+2.1) (1 point) Expliquez succinctement l'intérêt de placer les fichiers de la vue
+     dans le sous-répertoire WEB-INF, plutôt qu'à la racine du site.
+
+Réponse:
+Si c'est dans la racine du site, les utilisateurs peuvent accéder directement au fichier en mettant les 
+paramètres de leur choix, ce qui peut d'une part permettre de (plus facilement) faire (relativement)
+ n'importe quoi avec
+la page, et d'autre part permet de mettre moins de code dans le .jsp qui servirait à vérifier les entrées
+
+
+2.2) (2 points) Les pages .jsp permettent l'annotation <% page session="false" %> qui
+     permettent de ne pas créer automatiquement de session. De même, dans un Servlet,
+     on peut utiliser request.getSession(false) pour ne pas créer d'objet session s'il
+     n'existe pas (la méthode vue en cours, request.getSession() est un alias pour
+     request.getSession(true)).
+     
+     Expliquez simplement (3 ou 4 lignes max) quel peut être l'intérêt d'un tel mécanisme.
+     
+Réponse:
+
